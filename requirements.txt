@@ -1,4 +1,4 @@
-Django==1.11.3
+Django==1.11.7
 jieba==0.39
 xlrd==1.1.0
 xlutils==2.0.0
