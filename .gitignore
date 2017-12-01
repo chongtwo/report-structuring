@@ -1,0 +1,13 @@
+# Byte-conpiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyBuilder
+target/
+
+# pyenv
+.python-version
+
+# pycharm 
+.idea/
