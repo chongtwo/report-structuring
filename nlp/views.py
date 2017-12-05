@@ -14,4 +14,6 @@ class IndexView(generic.TemplateView):
 def process(request):
     msg = request.GET.get('msg')
     results = utils.processing_procedure(msg)
-    return JsonResponse({'results': results})
+    content = {'results': results,
+               'origin_msg' : msg}
+    return JsonResponse(content, json_dumps_params={'ensure_ascii': False})

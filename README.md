@@ -38,6 +38,7 @@ nlp/process/?msg={content}
       "变化": "",
       "可能性": ""
     }
-]}
+],
+ "origin_msg": "原始报告"}
 ```
 
