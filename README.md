@@ -22,7 +22,13 @@ python manage.py runserver 0.0.0.0:80
 nlp/process/?msg={content}
 ```
 
-`{content}` 代表一段报告
+`{content}` 代表一段报告。示例
+
+```
+nlp/process/?msg=胸腔积液。
+```
+
+目前仅支持胸部CT报告的结构化
 
 返回结果
 
