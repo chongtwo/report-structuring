@@ -176,7 +176,7 @@ def cline_extract(match_dict, after_match):
 def processing_procedure(sentence):
     sentences = seg_sentence(sentence)
     sentence_list = sentences.split('\n')
-
+    sentence_list.pop(-1)
     results = []
     for s in sentence_list:
         words = word_segment(s)
@@ -189,6 +189,6 @@ def processing_procedure(sentence):
 
 
 if __name__ == "__main__":
-    s = "胸廓对称，双肺野清晰，未见异常密度影。气管、左右主支气管及其分支开口未见狭窄、中断。纵隔居中，心脏及大血管走行自然，心脏不大，纵隔内未见肿大淋巴结影。胸膜腔未见积液。"
+    s = "胸部CT平扫未见异常。"
     results = processing_procedure(s)
     print(results)

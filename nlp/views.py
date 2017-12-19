@@ -12,6 +12,7 @@ class IndexView(generic.TemplateView):
 
 
 def process(request):
+    utils.last_list_zgbw = ""
     msg = request.GET.get('msg')
     results, sentences_list = utils.processing_procedure(msg)
     content = {'sentences':sentences_list,
