@@ -185,7 +185,7 @@ def processing_procedure(sentence):
         combine_word(after_match, match_dict)
         result = cline_extract(match_dict, after_match)
         results.extend(result)
-    return results
+    return results, sentence_list
 
 
 if __name__ == "__main__":

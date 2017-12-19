@@ -13,7 +13,8 @@ class IndexView(generic.TemplateView):
 
 def process(request):
     msg = request.GET.get('msg')
-    results = utils.processing_procedure(msg)
-    content = {'results': results,
-               'origin_msg' : msg}
+    results, sentences_list = utils.processing_procedure(msg)
+    content = {'sentences':sentences_list,
+               'results': results,
+               'origin_msg': msg}
     return JsonResponse(content, json_dumps_params={'ensure_ascii': False})
