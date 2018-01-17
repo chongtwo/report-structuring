@@ -53,7 +53,7 @@ def word_segment(sentence):
 
 def modify_segment(seg_result):
     for key in mod_token_dict:
-        seg_result.replace(key, mod_token_dict[key])
+        seg_result = seg_result.replace(key, mod_token_dict[key])
     return seg_result
 
 
@@ -161,7 +161,7 @@ def cline_extract(match_dict, after_match):
             elif '区域' in k:
                 results[i]["区域"] += v + ','
             elif '性状' in k:
-                results[i]['形状'] += v + ','
+                results[i]['性状'] += v + ','
             elif '诊断' in k and '诊断后缀' not in k:
                 results[i]['诊断'] += v + ','
             elif '量词' in k:
